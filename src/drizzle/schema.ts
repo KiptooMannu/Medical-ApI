@@ -275,3 +275,7 @@ export type TILabTests = typeof LabTests.$inferInsert;
 export type TSLabTests = typeof LabTests.$inferSelect;
 export type TISchedules = typeof Schedules.$inferInsert;
 export type TSSchedules = typeof Schedules.$inferSelect;
+export type TIPatients = typeof Patients.$inferInsert;
+export type TSPatients = typeof Patients.$inferSelect;
+
+
