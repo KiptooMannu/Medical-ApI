@@ -10,6 +10,8 @@ import labTestsRouter from "./Labtests/Labtests.router";
 import medicalRecordRouter from "./Medical Records/Medicalrecords.router";
 import schedulesRouter from "./Schedules/schedules.router";
 import usersRouter from "./Users/users.router";
+import messagesRouter from "./Messages/Messages.router";
+import supportTicketsRouter from "./CustomerSupport/customersupport.router";
 
 
 
@@ -92,6 +94,8 @@ app.route ("/"  , patientsRouter)
 app.route("/", paymentsRouter);
 app.route('/', schedulesRouter);
 app.route('/', usersRouter);
+app.route('/' , messagesRouter)
+app.route ('/' , supportTicketsRouter)
 
 console.log('Routes registered:', app.routes);
 
