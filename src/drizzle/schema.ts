@@ -277,5 +277,7 @@ export type TISchedules = typeof Schedules.$inferInsert;
 export type TSSchedules = typeof Schedules.$inferSelect;
 export type TIPatients = typeof Patients.$inferInsert;
 export type TSPatients = typeof Patients.$inferSelect;
+export type TSDepartments = typeof Departments.$inferSelect;
+export type TIDepartments = typeof Departments.$inferSelect;
 
 

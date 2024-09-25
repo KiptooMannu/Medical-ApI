@@ -1,6 +1,18 @@
 import { Hono, Context } from "hono";
 import "dotenv/config";
 import { serve } from '@hono/node-server';
+import patientsRouter from './patients/Patients.router'
+import paymentsRouter from "./Payments/payments.router";
+import billingRouter from "./Billing/Billing.router";
+import departmentsRouter from "./Departments/department.router";
+import inventoryRouter from "./Inventory/Inventory.router";
+import labTestsRouter from "./Labtests/Labtests.router";
+import medicalRecordRouter from "./Medical Records/Medicalrecords.router";
+import schedulesRouter from "./Schedules/schedules.router";
+import usersRouter from "./Users/users.router";
+
+
+
 
 // Default route
 const app = new Hono().basePath("/api");
@@ -69,6 +81,21 @@ app.get('/', (c: Context) => {
 app.get('/ok', (c: Context) => {
     return c.text('Server running');
 });
+
+
+app.route ("/" , billingRouter)
+app.route ("/" , departmentsRouter)
+app.route ("/" , inventoryRouter)
+app.route ("/" ,  labTestsRouter)
+app.route ("/" , medicalRecordRouter)
+app.route ("/"  , patientsRouter)
+app.route("/", paymentsRouter);
+app.route('/', schedulesRouter);
+app.route('/', usersRouter);
+
+console.log('Routes registered:', app.routes);
+
+
 
 serve({
     fetch: app.fetch,

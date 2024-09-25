@@ -10,18 +10,18 @@ import {
 const usersRouter = new Hono();
 
 // Route to get all users
-usersRouter.get('/', getAllUsers);
+usersRouter.get('usersRouter/', getAllUsers);
 
 // Route to get a specific user by ID
-usersRouter.get('/:id', getUser);
+usersRouter.get('usersRouter/:id', getUser);
 
 // Route to create a new user
-usersRouter.post('/', createUser);
+usersRouter.post('usersRouter/', createUser);
 
 // Route to update an existing user by ID
-usersRouter.put('/:id', updateUser);
+usersRouter.put('usersRouter/:id', updateUser);
 
 // Route to delete a user by ID
-usersRouter.delete('/:id', deleteUser);
+usersRouter.delete('usersRouter/:id', deleteUser);
 
 export default usersRouter;

@@ -10,18 +10,18 @@ import {
 const schedulesRouter = new Hono();
 
 // Route to get all schedules
-schedulesRouter.get('/', getAllSchedules);
+schedulesRouter.get('schedulesRouter/', getAllSchedules);
 
 // Route to get a specific schedule by ID
-schedulesRouter.get('/:id', getSchedule);
+schedulesRouter.get('schedulesRouter/:id', getSchedule);
 
 // Route to create a new schedule
-schedulesRouter.post('/', createSchedule);
+schedulesRouter.post('schedulesRouter/', createSchedule);
 
 // Route to update an existing schedule by ID
-schedulesRouter.put('/:id', updateSchedule);
+schedulesRouter.put('schedulesRouter/:id', updateSchedule);
 
 // Route to delete a schedule by ID
-schedulesRouter.delete('/:id', deleteSchedule);
+schedulesRouter.delete('schedulesRouter/:id', deleteSchedule);
 
 export default schedulesRouter;
