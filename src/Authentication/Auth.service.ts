@@ -30,8 +30,8 @@ export const createAuthUserService = async (user: TSUsers, password: string): Pr
 
     // Hash the password before storing it
     const hashedPassword = await bcrypt.hash(password, 10); // You need to hash the password
-
-    // Insert the user into the Authentication table with password hash
+    console.log("Hashed password:", hashedPassword); // Log hashed password
+  
     await db.insert(Authentication).values({
         user_id: newUser.user_id, // Using the user_id from the new user
         password_hash: hashedPassword, // Storing the hashed password
