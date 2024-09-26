@@ -12,7 +12,7 @@ import schedulesRouter from "./Schedules/schedules.router";
 import usersRouter from "./Users/users.router";
 import messagesRouter from "./Messages/Messages.router";
 import supportTicketsRouter from "./CustomerSupport/customersupport.router";
-
+import authRouter from "./Authentication/Auth.router"; 
 
 
 
@@ -96,6 +96,7 @@ app.route('/', schedulesRouter);
 app.route('/', usersRouter);
 app.route('/' , messagesRouter)
 app.route ('/' , supportTicketsRouter)
+app.route ('/' ,authRouter )
 
 console.log('Routes registered:', app.routes);
 
